@@ -7,6 +7,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import type { PanInfo } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import img1 from '../assets/images/工作區域 2.webp?url';
+import img2 from '../assets/images/工作區域 3.webp?url';
+import img3 from '../assets/images/工作區域 4.webp?url';
 
 interface Slide {
   id: number;
@@ -17,13 +20,10 @@ const Carousel: React.FC = () => {
   const DESIGN_WIDTH = 1200;
 
   const slides: Slide[] = [
-    // { id: 1, image: "https://picsum.photos/1080/1240?random=1" },
-    // { id: 2, image: "https://picsum.photos/1080/1240?random=2" },
-    // { id: 3, image: "https://picsum.photos/1080/1240?random=3" },
-    { id: 1, image: "assets/images/工作區域 2.webp" },
-    { id: 2, image: "assets/images/工作區域 4.webp" },
-    { id: 3, image: "assets/images/工作區域 3.webp" },
-  ];
+  { id: 1, image: img1 },
+  { id: 2, image: img2 },
+  { id: 3, image: img3 },
+];
 
   const [index, setIndex] = useState<number>(1);
   const [scaleRatio, setScaleRatio] = useState<number>(1);
