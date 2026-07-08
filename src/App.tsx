@@ -17,12 +17,12 @@ const Carousel: React.FC = () => {
   const DESIGN_WIDTH = 1200;
 
   const slides: Slide[] = [
-    { id: 1, image: "https://picsum.photos/1080/1240?random=1" },
-    { id: 2, image: "https://picsum.photos/1080/1240?random=2" },
-    { id: 3, image: "https://picsum.photos/1080/1240?random=3" },
-    // { id: 1, image: "assets/images/1111.jpg.jpeg" },
-    // { id: 2, image: "assets/images/RELFYDESS.jpg.jpeg" },
-    // { id: 3, image: "assets/images/工作區域 4.jpg.jpeg" },
+    // { id: 1, image: "https://picsum.photos/1080/1240?random=1" },
+    // { id: 2, image: "https://picsum.photos/1080/1240?random=2" },
+    // { id: 3, image: "https://picsum.photos/1080/1240?random=3" },
+    { id: 1, image: "assets/images/工作區域 2.webp" },
+    { id: 2, image: "assets/images/工作區域 4.webp" },
+    { id: 3, image: "assets/images/工作區域 3.webp" },
   ];
 
   const [index, setIndex] = useState<number>(1);
