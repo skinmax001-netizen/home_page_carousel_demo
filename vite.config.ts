@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/skinmax_home_page_carousel/',
+    base: '/home_page_carousel_demo/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
