@@ -1,0 +1,6 @@
+{
+  "name": "Skinamx",
+  "description": "Skinamx premium interactive skincare treatments catalog.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
