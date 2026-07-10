@@ -20,10 +20,10 @@ const Carousel: React.FC = () => {
   const DESIGN_WIDTH = 1200;
 
   const slides: Slide[] = [
-  { id: 1, image: img1 },
-  { id: 2, image: img2 },
-  { id: 3, image: img3 },
-];
+    { id: 1, image: img1 },
+    { id: 2, image: img2 },
+    { id: 3, image: img3 },
+  ];
 
   const [index, setIndex] = useState<number>(1);
   const [scaleRatio, setScaleRatio] = useState<number>(1);
@@ -33,7 +33,7 @@ const Carousel: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      const containerWidth = Math.min(screenWidth, 720);
+      const containerWidth = Math.min(screenWidth, 1920);
       const ratio = containerWidth / DESIGN_WIDTH;
       setScaleRatio(ratio);
     };
@@ -84,7 +84,7 @@ const Carousel: React.FC = () => {
     <div
       style={{
         width: "100%",
-        maxWidth: "720px",
+        maxWidth: "1920px",
         margin: "0 auto",
         overflow: "hidden",
         display: "flex",
