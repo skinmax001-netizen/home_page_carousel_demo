@@ -65,10 +65,16 @@ const Carousel: React.FC = () => {
     _event: MouseEvent | TouchEvent | PointerEvent,
     info: PanInfo
   ): void => {
-    if (info.offset.x > 120) {
-      prevSlide();
-    } else if (info.offset.x < -120) {
-      nextSlide();
+    const offset = info.offset.x;
+    const velocity = info.velocity.x;
+
+    // Minimum distance of 15px to avoid triggering during basic tap/click
+    if (Math.abs(offset) > 15) {
+      if (offset > 60 || velocity > 250) {
+        prevSlide();
+      } else if (offset < -60 || velocity < -250) {
+        nextSlide();
+      }
     }
   };
 
@@ -177,6 +183,9 @@ const Carousel: React.FC = () => {
           overflow: hidden;
           cursor: grab;
           background: white;
+          touch-action: pan-y;
+          user-select: none;
+          -webkit-user-drag: none;
         }
 
         .slide-image {
@@ -184,6 +193,8 @@ const Carousel: React.FC = () => {
           height: 100%;
           object-fit: cover;
           pointer-events: none;
+          user-select: none;
+          -webkit-user-drag: none;
         }
       `}</style>
 
